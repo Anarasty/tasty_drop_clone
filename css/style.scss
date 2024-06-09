@@ -5,11 +5,90 @@
     box-sizing: border-box;
 }
 
-.roulette {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: bisque;
+    background-color: rgb(47, 48, 65);
     color: black;
+}
+
+.roulette {
+    width: 950px;
+    position: relative;
+    background-color: #1b1f24;
+    border-radius: 10px;
+
+    .arrow1 {
+        position: absolute;
+        // top: 100%;
+        left: 50%;
+        transform: translate3d(-50%, -20px, 0);
+        height: 60px;
+        filter: drop-shadow(0 0 20px rgba(184, 6, 6, 0.8));
+    }
+
+    .roll {
+        overflow: hidden;
+        
+        &__list {
+            display: inline-flex;
+            list-style: none;
+
+            &__item{
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                $sizes: 300px;
+                width: $sizes;
+                height: calc($sizes * .8);
+                opacity: .5;
+                transition: .3s ease;
+
+                &:nth-child(2n) {
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                &.active {
+                    opacity: 1;
+
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+
+                img {
+                    width: 80%;
+                    height: 80%;
+                    object-fit: contain;
+                    transition: .3s ease;
+                }
+            }
+        }
+    }
+
+    .start {
+        position: absolute;
+        top: 100%;
+        left: 43%;
+        transform: translate3d(-43%, 20px 0);
+        margin-top: 20px;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        background: #aa5353;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 6px;
+        transition: .2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: #e72121;
+        }
+    }
 }
