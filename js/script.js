@@ -13,7 +13,7 @@ const items = [
     {name: "Golden Edict of Shadows", img: 'imgs/tresure1_item9.png', chance: 45},
     {name: "Shadow in the Deep Dagger", img: 'imgs/tresure1_item10.png', chance: 50},
     {name: "Swift Claw", img: 'imgs/tresure1_item11.png', chance: 60},
-]
+];
 
 function getItem(excludeItem = null) {
     let item;
@@ -73,9 +73,12 @@ function start() {
 
     const item = list.querySelectorAll('li')[30]; // Adjust as needed
 
-    list.addEventListener('transitionend', () => {
+    function handleTransitionEnd() {
         isStarted = false;
         item.classList.add("active");
-        const data = console.log(JSON.parse(item.getAttribute('data-item')));
-    });
+        console.log(JSON.parse(item.getAttribute('data-item')));
+        list.removeEventListener('transitionend', handleTransitionEnd);
+    }
+
+    list.addEventListener('transitionend', handleTransitionEnd);
 }
