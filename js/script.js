@@ -59,6 +59,61 @@ generateItems();
 
 let isStarted = false;
 
+// function start() {
+//     if (isStarted) return;
+//     else isStarted = true;
+
+//     generateItems();
+//     const list = document.querySelector('.roll__list');
+
+//     setTimeout(() => {
+//         list.style.left = "50%";
+//         list.style.transform = 'translate3d(-50%, 0, 0)';
+//     }, 0);
+
+//     const item = list.querySelectorAll('li')[30]; // Adjust as needed
+
+//     function handleTransitionEnd() {
+//         isStarted = false;
+//         item.classList.add("active");
+//         console.log(JSON.parse(item.getAttribute('data-item')));
+//         list.removeEventListener('transitionend', handleTransitionEnd);
+//     }
+
+//     list.addEventListener('transitionend', handleTransitionEnd);
+// }
+
+function showPopup(item) {
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+    const popupName = document.getElementById('popup-name');
+    const closeBtn = document.querySelector('.popup .close');
+
+    popupImg.src = item.img;
+    popupName.textContent = item.name;
+
+    popup.style.display = 'block';
+    setTimeout(() => {
+        popup.style.opacity = 1;
+    }, 10);  // Немного задержим изменение opacity для плавности
+
+    closeBtn.onclick = function() {
+        popup.style.opacity = 0;
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500);  // Задержка перед скрытием попапа для плавного исчезновения
+    };
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.opacity = 0;
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500);  // Задержка перед скрытием попапа для плавного исчезновения
+        }
+    };
+}
+
 function start() {
     if (isStarted) return;
     else isStarted = true;
@@ -76,7 +131,14 @@ function start() {
     function handleTransitionEnd() {
         isStarted = false;
         item.classList.add("active");
-        console.log(JSON.parse(item.getAttribute('data-item')));
+        const rolledItem = JSON.parse(item.getAttribute('data-item'));
+        console.log(rolledItem);
+        
+        // Показываем попап через 3 секунды
+        setTimeout(() => {
+            showPopup(rolledItem);
+        }, 1000);
+
         list.removeEventListener('transitionend', handleTransitionEnd);
     }
 
