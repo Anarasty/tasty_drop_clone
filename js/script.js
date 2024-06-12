@@ -1,5 +1,4 @@
-// console.log("test1")
-const cells = 61 //!31 WAS
+const cells = 61;
 
 // From 0.001 to 100
 const items = [
@@ -16,64 +15,67 @@ const items = [
     {name: "Swift Claw", img: 'imgs/tresure1_item11.png', chance: 60},
 ]
 
-function getItem() {
+function getItem(excludeItem = null) {
     let item;
 
     while (!item) {
-        const chance = Math.floor(Math.random() * 100000)
+        const chance = Math.floor(Math.random() * 100000);
 
         items.forEach(elm => {
-            if (chance < elm.chance && !item) item = elm
-            // if (chance * 1000 < elm.chance && !item) item = elm
-        })
+            if (chance < elm.chance && !item && elm !== excludeItem) {
+                item = elm;
+            }
+        });
     }
 
-    return item
+    return item;
 }
 
 function generateItems() {
-    document.querySelector('.roll__list').remove()
+    document.querySelector('.roll__list').remove();
     document.querySelector('.roll').innerHTML = `
     <ul class="roll__list"></ul>
-    `
+    `;
 
-    const list = document.querySelector('.roll__list')
+    const list = document.querySelector('.roll__list');
+    let lastItem = null;
 
     for (let i = 0; i < cells; i++) {
-        const item = getItem()
+        const item = getItem(lastItem);
+        lastItem = item; // update last item
 
-        const li = document.createElement('li')
-        li.setAttribute('data-item', JSON.stringify(item))
-        li.classList.add('roll__list__item')
+        const li = document.createElement('li');
+        li.setAttribute('data-item', JSON.stringify(item));
+        li.classList.add('roll__list__item');
         li.innerHTML = `
             <img src="${item.img}" alt="item">
-        `
+        `;
 
-        list.append(li)
+        list.append(li);
     }
 }
 
-generateItems()
+generateItems();
 
 let isStarted = false;
 
 function start() {
-    if (isStarted) return
-    else isStarted = true
+    if (isStarted) return;
+    else isStarted = true;
 
-    generateItems()
-    const list = document.querySelector('.roll__list')
+    generateItems();
+    const list = document.querySelector('.roll__list');
 
-   setTimeout(() => {
-     list.style.left = "50%"
-    list.style.transform = 'translate3d(-50%, 0, 0)'
-   }, 0)
+    setTimeout(() => {
+        list.style.left = "50%";
+        list.style.transform = 'translate3d(-50%, 0, 0)';
+    }, 0);
 
-    const item = list.querySelectorAll('li')[30] //!15WAS
+    const item = list.querySelectorAll('li')[30]; // Adjust as needed
 
     list.addEventListener('transitionend', () => {
-        isStarted = false
-        item.classList.add("active")
-        const data = console.log(JSON.parse(item.getAttribute('data-item')))
-    })
+        isStarted = false;
+        item.classList.add("active");
+        const data = console.log(JSON.parse(item.getAttribute('data-item')));
+    });
 }
