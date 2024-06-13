@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
     <title>TastyClone</title>
 </head>
 <body>
-    <div class="roulette">
-        <img class="arrow1" src="imgs/arrow_down2.png" alt="arrow1">
-        <div class="roll">
-            <ul class="roll__list">
-            </ul>
+    <div class="app">
+        <div class="roulette">
+            <img class="arrow1" src="imgs/arrow_down2.png" alt="arrow1">
+            <div class="roll">
+                <ul class="roll__list">
+                </ul>
+            </div>
+    
+            <button onclick="start()" class="start">Roll</button>
         </div>
-
-        <button onclick="start()" class="start">Roll</button>
-    </div>
-
-    <!-- Добавляем pop-up -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <img id="popup-img" src="" alt="Item image">
-            <p id="popup-name"></p>
+    
+        <!-- Добавляем pop-up -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <img id="popup-img" src="" alt="Item image">
+                <p id="popup-name"></p>
+                <p id="price__inf">Avg market price ~ <span id="popup-price"></span>$</p>
+            </div>
         </div>
+    
     </div>
-
+    
     <script src="js/script.js"></script>
 </body>
 </html>

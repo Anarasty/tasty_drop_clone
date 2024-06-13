@@ -1,120 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // font-family: sans-serif;
+  font-family: "Yellowtail", cursive;
+  box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: rgb(47, 48, 65);
-    color: black;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(47, 48, 65);
+  color: black;
 }
 
 .roulette {
-    width: 950px;
-    position: relative;
-    background-color: #1b1f24;
-    border-radius: 10px;
+  width: 950px;
+  position: relative;
+  background-color: #1b1f24;
+  border-radius: 10px;
 
-    .arrow1 {
-        position: absolute;
-        // top: 100%;
-        left: 50%;
-        transform: translate3d(-50%, -20px, 0);
-        height: 60px;
-        filter: drop-shadow(0 0 20px rgba(184, 6, 6, 0.8));
-        z-index: 1;
-    }
+  .arrow1 {
+    position: absolute;
+    // top: 100%;
+    left: 50%;
+    transform: translate3d(-50%, -20px, 0);
+    height: 60px;
+    filter: drop-shadow(0 0 20px rgba(184, 6, 6, 0.8));
+    z-index: 1;
+  }
 
-    .roll {
-        overflow: hidden;
-        
-        &__list {
-            position: relative;
-            display: inline-flex;
-            list-style: none;
-            left: 0;
-            transform: translate3d(0, 0, 0);
-            transition: 5s cubic-bezier(.21, .53, .29, .99);
+  .roll {
+    overflow: hidden;
 
-            &__item{
-                flex-shrink: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                $sizes: 300px;
-                width: $sizes;
-                height: calc($sizes * .8);
-                // opacity: .5;
-                transition: .3s ease;
+    &__list {
+      position: relative;
+      display: inline-flex;
+      list-style: none;
+      left: 0;
+      transform: translate3d(0, 0, 0);
+      transition: 5s cubic-bezier(0.21, 0.53, 0.29, 0.99);
 
-                &:nth-child(2n) {
-                    background: rgba(0, 0, 0, 0.2);
-                }
+      &__item {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        $sizes: 300px;
+        width: $sizes;
+        height: calc($sizes * 0.8);
+        // opacity: .5;
+        transition: 0.3s ease;
 
-                &.active {
-                    // opacity: 1;
-                    background-color: #ff000090;
-
-                    img {
-                        transform: scale(1.05);
-                    }
-                }
-
-                img {
-                    width: 80%;
-                    height: 80%;
-                    object-fit: contain;
-                    transition: .3s ease;
-                }
-            }
+        &:nth-child(2n) {
+          background: rgba(0, 0, 0, 0.2);
         }
-    }
 
-    .start {
-        position: absolute;
-        top: 100%;
-        left: 43%;
-        transform: translate3d(-43%, 20px 0);
-        margin-top: 20px;
-        padding: 8px 25px;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-        background: #aa5353;
-        color: white;
-        font-weight: 600;
-        font-size: 1.5rem;
-        letter-spacing: 6px;
-        transition: .2s ease;
-        cursor: pointer;
+        &.active {
+          // opacity: 1;
+          background-color: #ff000090;
 
-        &:hover {
-            background: #e72121;
+          img {
+            transform: scale(1.05);
+          }
         }
+
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+          transition: 0.3s ease;
+        }
+      }
     }
+  }
+
+  .start {
+    position: absolute;
+    top: 100%;
+    left: 43%;
+    transform: translate3d(-43%, 20px 0);
+    margin-top: 20px;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #aa5353;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: #e72121;
+    }
+  }
 }
 
 /* Стили для pop-up */
 .popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
 
-.popup-content {
+  &-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -122,23 +123,23 @@ body {
     width: 80%;
     max-width: 300px;
     text-align: center;
-}
+  }
 
-.close {
+  .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.popup img {
+    &:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  img {
     width: 100%;
     height: auto;
+  }
 }
