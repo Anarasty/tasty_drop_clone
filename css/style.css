@@ -37,7 +37,7 @@ nav .menu_box ul {
   font-size: 2rem;
 }
 nav .menu_box ul li {
-  margin: 20px;
+  margin: 30px;
 }
 nav .menu_box ul li a {
   color: white;
@@ -53,7 +53,7 @@ nav .menu_box ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: rgb(47, 48, 65);
   color: black;
 }
@@ -153,9 +153,9 @@ nav .menu_box ul li a:hover {
   border: 1px solid #ffffff;
   border-radius: 10px;
   width: 80%;
-  max-width: 600px;
+  max-width: 450px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,7 +178,39 @@ nav .menu_box ul li a:hover {
   cursor: pointer;
 }
 .popup img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+.rewards {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.rewards-txt {
+  font-size: 3rem;
+}
+.rewards-list {
+  background: #1b1f24;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+}
+.rewards li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e72121;
+}
+.rewards li img {
+  width: 40%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
