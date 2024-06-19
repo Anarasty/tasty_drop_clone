@@ -281,7 +281,7 @@ nav {
     img {
       width: 40%;
       height: auto;
-      filter: drop-shadow(1px 1px 10px #e72121);
+      filter: drop-shadow(0px 0px 20px #e72121);
     }
   }
 }
@@ -295,4 +295,9 @@ footer {
   align-items: center;
   margin-top: 2%;
   padding: 0.5%;
+}
+
+// ?? ALL CASES SECTION
+.cases__sec {
+  background: #aa5353;
 }
