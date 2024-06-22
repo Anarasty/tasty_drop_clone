@@ -269,6 +269,7 @@ footer {
   border: 1px solid white;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
 }
 .cases__sec .cases_box ul li img {
   margin: auto;
@@ -297,4 +298,9 @@ footer {
   font-size: 2.8rem;
   color: #e72121;
   font-weight: 700;
+}
+.cases__sec .cases_box ul li:hover {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.18);
 }/*# sourceMappingURL=style.css.map */
