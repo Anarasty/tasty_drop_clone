@@ -243,5 +243,58 @@ footer {
 }
 
 .cases__sec {
-  background: #aa5353;
+  min-height: 80vh;
+  width: 70%;
+  margin: 1% auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cases__sec h1 {
+  font-size: 3rem;
+  color: white;
+}
+.cases__sec .cases_box {
+  width: 100%;
+}
+.cases__sec .cases_box ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+}
+.cases__sec .cases_box ul li {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.cases__sec .cases_box ul li img {
+  margin: auto;
+  width: 80%;
+}
+.cases__sec .cases_box ul li a {
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cases__sec .cases_box ul li a .old__price {
+  font-size: 2rem;
+  text-decoration: line-through;
+  position: absolute;
+  top: -25px;
+  right: -60px;
+  color: white;
+  font-weight: 500;
+}
+.cases__sec .cases_box ul li a .new__price {
+  position: relative;
+  margin-top: 30px;
+  font-size: 2.8rem;
+  color: #e72121;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

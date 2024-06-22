@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 * {
   margin: 0;
@@ -35,7 +35,7 @@ nav {
       color: #ffffff;
       font-weight: 200;
       text-shadow: 2px 2px 10px rgb(0, 0, 0);
-      
+
       &:hover {
         cursor: pointer;
       }
@@ -49,10 +49,10 @@ nav {
       li {
         margin: 30px;
 
-        a{
+        a {
           color: white;
           font-weight: 500;
-          transition: .3s ease;
+          transition: 0.3s ease;
 
           &:hover {
             text-shadow: 1px 1px 5px white;
@@ -60,7 +60,6 @@ nav {
         }
       }
     }
-
   }
 }
 
@@ -70,7 +69,7 @@ nav {
 //   justify-content: center;
 //   align-items: center;
 //   background: #aa5353;
-  
+
 //   .case__name {
 //     font-size: 3rem;
 //     margin-top: 2%;
@@ -198,7 +197,7 @@ nav {
   }
 
   &-content {
-    background-color:#1b1f24;
+    background-color: #1b1f24;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #ffffff;
@@ -207,7 +206,7 @@ nav {
     max-width: 450px;
     // max-height: 800px;
     text-align: center;
-    font-size: 1.7rem;  
+    font-size: 1.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,7 +223,7 @@ nav {
     // background-color: #aa5353;
     align-self: self-end;
     margin: -30px 0px;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
     &:hover,
     &:focus {
@@ -238,7 +237,7 @@ nav {
     height: auto;
     filter: drop-shadow(0 0 10px rgb(255, 255, 255));
     // border-radius: 10px;
-    }
+  }
 }
 
 .rewards {
@@ -249,12 +248,12 @@ nav {
   justify-content: center;
   margin: 0 auto;
 
-  &-txt{
+  &-txt {
     font-size: 3rem;
     color: white;
   }
 
-  &-list{
+  &-list {
     // background: #1b1f24;
     width: 100%;
     display: grid;
@@ -299,5 +298,75 @@ footer {
 
 // ?? ALL CASES SECTION
 .cases__sec {
-  background: #aa5353;
+  min-height: 80vh;
+  // background: #aa5353;
+  width: 70%;
+  margin: 1% auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    color: white;
+  }
+
+  .cases_box {
+    // background: #aa5353;
+    width: 100%;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 1em;
+      grid-auto-rows: minmax(100px, auto);
+
+      li {
+        // display: flex;
+        // flex-direction: column;
+        // // background: #1b1f24;
+        // justify-content: center;
+        // align-items: center;
+        border: 1px solid white;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+
+        img {
+          margin: auto;
+          width: 80%;
+        }
+
+        a {
+          color: white;
+          font-size: 1.2rem;
+          display: flex;
+          flex-direction: column;
+          // background: #1b1f24;
+          justify-content: center;
+          align-items: center;
+          // position: relative;
+
+          .old__price {
+            font-size: 2rem;
+            text-decoration: line-through;
+            // margin-top: -10px;
+            position: absolute;
+            top: -25px;
+            right: -60px;
+            color: white;
+            font-weight: 500;
+          }
+
+          .new__price {
+            position: relative;
+            margin-top: 30px;
+            font-size: 2.8rem;
+            color: #e72121;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
