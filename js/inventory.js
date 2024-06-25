@@ -13,8 +13,12 @@ function loadInventory() {
             const item = inventory[itemName];
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src="${item.img}" alt="${item.name}" width="50" height="50">
-                <span>${item.name} x${item.quantity}</span>
+                <img src="${item.img}" alt="${item.name}" >
+                <p>${item.name} <strong>x${item.quantity}</strong></p>
+                <div class="inv_divider">
+                    <p>${item.price}$</p>
+                    <button>SELL</button>
+                </div>
             `;
             ul.appendChild(li);
         }
