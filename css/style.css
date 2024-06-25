@@ -60,10 +60,18 @@ nav .menu_box ul li a:hover {
   min-height: 70vh;
   background-color: rgb(47, 48, 65);
   color: black;
+  position: relative;
 }
 .app .case__name {
   font-size: 3rem;
   margin-bottom: 7%;
+  color: white;
+}
+.app .inv__bal {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 1.6rem;
   color: white;
 }
 
@@ -312,6 +320,12 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.inventory__sec .empty-inv {
+  color: white;
+  text-align: center;
+  margin: 10% auto;
+  font-size: 2rem;
 }
 .inventory__sec h1 {
   font-size: 3rem;

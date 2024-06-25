@@ -84,10 +84,19 @@ nav {
   min-height: 70vh;
   background-color: rgb(47, 48, 65);
   color: black;
+  position: relative;
 
   .case__name {
     font-size: 3rem;
     margin-bottom: 7%;
+    color: white;
+  }
+
+  .inv__bal{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 1.6rem;
     color: white;
   }
 }
@@ -386,6 +395,13 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  .empty-inv {
+    color: white;
+    text-align: center;
+    margin: 10% auto;
+    font-size: 2rem;
+  }
 
   h1 {
     font-size: 3rem;
