@@ -114,6 +114,17 @@ function showPopup(item) {
     };
 }
 
+//LOCALSTORAGE add items on roll
+function addItemToLocalStorage(item) {
+    let inventory = JSON.parse(localStorage.getItem('inventory')) || {};
+    if (inventory[item.name]) {
+        inventory[item.name].quantity += 1;
+    } else {
+        inventory[item.name] = {...item, quantity: 1};
+    }
+    localStorage.setItem('inventory', JSON.stringify(inventory));
+}
+
 function start() {
     if (isStarted) return;
     else isStarted = true;
@@ -133,6 +144,9 @@ function start() {
         item.classList.add("active");
         const rolledItem = JSON.parse(item.getAttribute('data-item'));
         console.log(rolledItem);
+
+        // / Add to local storage
+        addItemToLocalStorage(rolledItem);
         
         // Показываем попап через 3 секунды
         setTimeout(() => {
