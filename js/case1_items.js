@@ -1,3 +1,5 @@
+const casePrice = 159; // Установите цену для каждого кейса
+
 const items = [
     {name: "Crimson Gates of Nothl", img: 'imgs/tresure1_item1.png', chance: 5, price: 310},
     {name: "Crimson Progenitor's Bane", img: 'imgs/tresure1_item2.png', chance: 10, price: 421},

@@ -1,3 +1,5 @@
+const casePrice = 349; // Установите цену для каждого кейса
+
 const items = [
     {name: "Fire Lotus Belt", img: 'imgs/tresure3_item1.png', chance: 5, price: 429},
     {name: "Dragonclaw Hook", img: 'imgs/tresure3_item2.png', chance: 10, price: 384},

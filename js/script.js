@@ -127,8 +127,19 @@ function addItemToLocalStorage(item) {
 
 function start() {
     if (isStarted) return;
-    else isStarted = true;
+    
+    const balance = parseInt(localStorage.getItem('balance'));
+    
+    if (balance < casePrice) {
+        console.log('Недостаточно средств для прокрутки');
+        return;
+    }
+    
+    // Списываем стоимость кейса с баланса
+    localStorage.setItem('balance', balance - casePrice);
+    loadBalance(); // Обновляем отображение баланса на странице
 
+    isStarted = true;
     generateItems();
     const list = document.querySelector('.roll__list');
 
@@ -145,7 +156,7 @@ function start() {
         const rolledItem = JSON.parse(item.getAttribute('data-item'));
         console.log(rolledItem);
 
-        // / Add to local storage
+        // Добавляем предмет в локальное хранилище
         addItemToLocalStorage(rolledItem);
         
         // Показываем попап через 3 секунды
@@ -158,3 +169,6 @@ function start() {
 
     list.addEventListener('transitionend', handleTransitionEnd);
 }
+
+
+/////!!!@ 22@!&
