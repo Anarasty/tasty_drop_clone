@@ -180,6 +180,10 @@ nav .menu_box ul li a:hover {
   font-weight: 600;
   color: white;
 }
+.popup-content h3 {
+  margin: 10% auto;
+  width: 80%;
+}
 .popup .close {
   color: #ffffff;
   float: right;

@@ -114,6 +114,33 @@ function showPopup(item) {
     };
 }
 
+function showInsufficientFundsPopup() {
+    const popup = document.getElementById('insufficient-funds-popup');
+    const closeBtn = document.querySelector('#insufficient-funds-popup .close');
+
+    popup.style.display = 'block';
+    setTimeout(() => {
+        popup.style.opacity = 1;
+    }, 10);
+
+    closeBtn.onclick = function() {
+        popup.style.opacity = 0;
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500);
+    };
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.opacity = 0;
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500);
+        }
+    };
+}
+
+
 //LOCALSTORAGE add items on roll
 function addItemToLocalStorage(item) {
     let inventory = JSON.parse(localStorage.getItem('inventory')) || {};
@@ -132,6 +159,7 @@ function start() {
     
     if (balance < casePrice) {
         console.log('Недостаточно средств для прокрутки');
+        showInsufficientFundsPopup();
         return;
     }
     
