@@ -483,3 +483,40 @@ footer {
     }
   }
 }
+
+.account__sec {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  .acc__box {
+    width: 50%;
+    // height: 50%;
+    background: #1b1f24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      margin: 15px 0;
+      font-size: 1.5rem;
+      color: white;
+      width: 100%;
+      display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-column-gap: 10px;
+    // grid-row-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: white;
+    margin-top: 5%;
+  }
+}

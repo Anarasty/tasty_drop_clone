@@ -393,4 +393,34 @@ footer {
 .inventory__sec .inventory ul li .inv_divider button:hover {
   color: white;
   background-color: #e72121;
+}
+
+.account__sec {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.account__sec .acc__box {
+  width: 50%;
+  background: #1b1f24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.account__sec .acc__box p {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+.account__sec h1 {
+  font-size: 3rem;
+  color: white;
+  margin-top: 5%;
 }/*# sourceMappingURL=style.css.map */
