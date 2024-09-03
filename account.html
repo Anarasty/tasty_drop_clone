@@ -22,21 +22,115 @@
       </div>
     </nav>
 
-    <section class="account__sec">
+    <!-- <section class="account__sec">
       <h1>Your Profile</h1>
       <div class="acc__box">
-        <p class="acc__name">Your name: <span id="acc_name">Nika22</span> <button>Update</button></p>
-        <p class="acc__pass">Your password: <span id="acc_pass">12345</span> <button>Update</button></p>
-        <p class="inv__bal">Your balance: <span id="balance">1000</span> <button>Donate</button></p>
+        <p class="acc__name"><span class="acc__name_span">Your name:</span> <span id="acc_name">Nika22</span> <button>Update</button></p>
+        <p class="acc__pass"><span class="acc__pass_span">Your password:</span> <span id="acc_pass">12345</span> <button>Update</button></p>
+        <p class="inv__bal"><span class="inv__bal_span">Your balance:</span> <span id="balance">1000</span> <button>Donate</button></p>
       </div>
 
+  </section> -->
+  <section class="account__sec">
+    <h1>Your Profile</h1>
+    <div class="acc__box">
+      <p class="acc__name">
+        <span class="acc__name_span">Your name:</span>
+        <span id="acc_name">Nika22</span>
+        <button onclick="updateName()">Update</button>
+      </p>
+      <input type="text" id="name_input" placeholder="Enter new name" style="display:none;" autocomplete="off" maxlength="20"/>
+
+      <p class="acc__pass">
+        <span class="acc__pass_span">Your password:</span>
+        <span id="acc_pass">12345</span>
+        <button onclick="updatePassword()">Update</button>
+      </p>
+      <input type="text" id="pass_input" placeholder="Enter new password" style="display:none;" autocomplete="off" maxlength="10"/>
+
+      <p class="inv__bal">
+        <span class="inv__bal_span">Your balance:</span>
+        <span id="balance">0000</span>
+        <button onclick="updateBalance()">Donate</button>
+      </p>
+      <input type="number" id="bal_input" placeholder="Enter amount to donate" style="display:none;" autocomplete="off" maxlength="5"/>
+    </div>
   </section>
 
-    <!-- footer -->
-    <footer>TM &#9400; 2024 Anarasty - All Rights Reserved.</footer>
+  <!-- footer -->
+  <footer>TM &#9400; 2024 Anarasty - All Rights Reserved.</footer>
 
-    <!-- <script src="js/balance.js"></script> Подключаем скрипт для отображения баланса
-    <script src="js/inventory.js"></script> -->
-    <!-- Подключаем скрипт для инвентаря -->
+  <script src="js/balance.js"></script> <!-- Подключаем скрипт для отображения баланса -->
+  <script src="js/account.js"></script> 
+  <!-- <script>
+    // Initialize name and password if not already set in local storage
+    if (localStorage.getItem('name') === null) {
+        localStorage.setItem('name', 'Nika22');
+    }
+    if (localStorage.getItem('password') === null) {
+        localStorage.setItem('password', '12345');
+    }
+
+    function loadAccountData() {
+      const nameElement = document.getElementById('acc_name');
+      const passElement = document.getElementById('acc_pass');
+      if (nameElement && passElement) {
+          nameElement.textContent = localStorage.getItem('name');
+          passElement.textContent = localStorage.getItem('password');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAccountData);
+
+    function updateName() {
+      const nameInput = document.getElementById("name_input");
+      const nameSpan = document.getElementById("acc_name");
+
+      if (nameInput.style.display === "none") {
+        nameInput.style.display = "block";
+      } else {
+        const newName = nameInput.value;
+        if (newName) {
+          nameSpan.textContent = newName;
+          localStorage.setItem('name', newName); // Save new name to localStorage
+        }
+        nameInput.style.display = "none";
+      }
+    }
+
+    function updatePassword() {
+      const passInput = document.getElementById("pass_input");
+      const passSpan = document.getElementById("acc_pass");
+
+      if (passInput.style.display === "none") {
+        passInput.style.display = "block";
+      } else {
+        const newPass = passInput.value;
+        if (newPass) {
+          passSpan.textContent = newPass;
+          localStorage.setItem('password', newPass); // Save new password to localStorage
+        }
+        passInput.style.display = "none";
+      }
+    }
+
+    function updateBalance() {
+      const balInput = document.getElementById("bal_input");
+      const balanceSpan = document.getElementById("balance");
+
+      if (balInput.style.display === "none") {
+        balInput.style.display = "block";
+      } else {
+        const donation = parseFloat(balInput.value);
+        if (!isNaN(donation) && donation > 0) {
+          const currentBalance = parseFloat(balanceSpan.textContent);
+          const newBalance = (currentBalance + donation).toFixed(2);
+          balanceSpan.textContent = newBalance;
+          localStorage.setItem('balance', newBalance); // Save new balance to localStorage
+        }
+        balInput.style.display = "none";
+      }
+    }
+  </script> -->
   </body>
 </html>

@@ -507,10 +507,32 @@ footer {
       color: white;
       width: 100%;
       display: grid;
-    grid-template-columns: repeat(3, 1fr);
+      // justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
     // grid-column-gap: 10px;
     // grid-row-gap: 1em;
-    grid-auto-rows: minmax(100px, auto);
+      grid-auto-rows: minmax(100px, auto);
+
+      button {
+        width: 50%;
+        height: 50%;
+        background-color: #e72121;
+      }
+    }
+
+    .acc__name_span, .acc__pass_span, .inv__bal_span {
+      margin-left: 10%;
+    }
+
+    input {
+      // background: #aa5353;
+      width: 50%;
+      height: 50px;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 5%;
     }
   }
 
