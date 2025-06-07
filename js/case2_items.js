@@ -1,4 +1,4 @@
-const casePrice = 99; // Установите цену для каждого кейса
+const casePrice = 99; 
 
 const items = [
     {name: "Flockheart's Gamble", img: 'imgs/tresure2_item1.png', chance: 5, price: 89},

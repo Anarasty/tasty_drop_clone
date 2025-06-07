@@ -253,6 +253,10 @@ footer {
   margin-top: 2%;
   padding: 0.5%;
 }
+footer a {
+  margin-inline: 0.4rem;
+  color: #e72121;
+}
 
 .cases__sec {
   min-height: 80vh;
@@ -294,6 +298,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.cases__sec .cases_box ul li a p {
+  text-align: center;
 }
 .cases__sec .cases_box ul li a .old__price {
   font-size: 2rem;
@@ -424,8 +431,20 @@ footer {
   width: 50%;
   height: 50%;
   background-color: #e72121;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
 }
-.account__sec .acc__box .acc__name_span, .account__sec .acc__box .acc__pass_span, .account__sec .acc__box .inv__bal_span {
+.account__sec .acc__box p button:hover {
+  background-color: white;
+  color: black;
+}
+.account__sec .acc__box .acc__name_span,
+.account__sec .acc__box .acc__pass_span,
+.account__sec .acc__box .inv__bal_span {
   margin-left: 10%;
 }
 .account__sec .acc__box input {
@@ -435,6 +454,8 @@ footer {
   border-radius: 5px;
   border: none;
   margin-bottom: 5%;
+  outline: none;
+  padding-inline: 0.4rem;
 }
 .account__sec h1 {
   font-size: 3rem;

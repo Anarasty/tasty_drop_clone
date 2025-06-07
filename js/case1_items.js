@@ -1,4 +1,4 @@
-const casePrice = 159; // Установите цену для каждого кейса
+const casePrice = 159; 
 
 const items = [
     {name: "Crimson Gates of Nothl", img: 'imgs/tresure1_item1.png', chance: 5, price: 310},

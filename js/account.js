@@ -1,6 +1,5 @@
-// Initialize name, password, and balance if not already set in local storage
 if (localStorage.getItem('name') === null) {
-    localStorage.setItem('name', 'Nika22');
+    localStorage.setItem('name', 'User');
 }
 if (localStorage.getItem('password') === null) {
     localStorage.setItem('password', '12345');

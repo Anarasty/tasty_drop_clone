@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon" />
     <title>Rarities of the Benefactor</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="logo__box">
-            <h1>Tasty Clone</h1>
-        </div>
-        <div class="menu_box">
-            <ul>
-                <li><a href="index.html">Main</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
-                <li><a href="">Account</a></li>
-                <!-- <li><a href="">Profile</a></li> -->
-            </ul>
-        </div>
+      <div class="logo__box">
+        <h1>Tasty Clone</h1>
+      </div>
+      <div class="menu_box">
+        <ul>
+          <li><a href="index.html">Main</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="">Account</a></li>
+        </ul>
+      </div>
     </nav>
-    <!-- <header>
-        <h2 class="case__name">Treasure of the Crimson Witness 2019</h2>
-    </header> -->
     <div class="app">
-        <div>
-            <h2 class="case__name">Rarities of the Benefactor</h2>
-            <p class="inv__bal">Your balance: <span id="balance">1000</span>$</p>
+      <div>
+        <h2 class="case__name">Rarities of the Benefactor</h2>
+        <p class="inv__bal">Your balance: <span id="balance">1000</span>$</p>
+      </div>
+      <div class="roulette">
+        <img class="arrow1" src="imgs/arrow_down2.png" alt="arrow1" />
+        <div class="roll">
+          <ul class="roll__list"></ul>
         </div>
-        <div class="roulette">
-            <img class="arrow1" src="imgs/arrow_down2.png" alt="arrow1">
-            <div class="roll">
-                <ul class="roll__list">
-                </ul>
-            </div>
-    
-            <button onclick="start()" class="start">Roll</button>
+
+        <button onclick="start()" class="start">Roll</button>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img id="popup-img" src="" alt="Item image" />
+          <p id="popup-name"></p>
+          <p id="price__inf">
+            Avg market price ~ <span id="popup-price" class="popup-price"></span
+            ><span class="popup-price"> $</span>
+          </p>
         </div>
-    
-        <!-- Добавляем pop-up -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <img id="popup-img" src="" alt="Item image">
-                <p id="popup-name"></p>
-                <p id="price__inf">Avg market price ~ <span id="popup-price" class="popup-price"></span><span class="popup-price"> $</span></p>
-            </div>
+      </div>
+
+      <div id="insufficient-funds-popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h3>Looks like you don't have enough funds ...</h3>
         </div>
+      </div>
     </div>
 
-    <!-- Возможны награды -->
     <div id="rewards" class="rewards">
-        <p class="rewards-txt">Possible prizes</p>
-        <ul id="rewards-list" class="rewards-list"></ul>
+      <p class="rewards-txt">Possible prizes</p>
+      <ul id="rewards-list" class="rewards-list"></ul>
     </div>
 
     <!-- footer -->
     <footer>
-        TM &#9400; 2024 Anarasty - All Rights Reserved.
+      TM &#9400; 2024
+      <a href="https://github.com/Anarasty" target="_blank">Anarasty</a> - All
+      Rights Reserved.
     </footer>
-    
-    <!-- <script src="js/script.js"></script> -->
-    <script src="js/balance.js"></script> <!-- Подключаем скрипт для отображения баланса -->
-    <script src="js/case3_items.js"></script> <!-- Подключаем список шмоток для данного кейса -->
+
+    <script src="js/balance.js"></script>
+    <script src="js/case3_items.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

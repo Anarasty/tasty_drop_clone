@@ -1,10 +1,3 @@
-// inventory.js
-
-// Initialize balance if not already set in local storage
-// if (localStorage.getItem('balance') === null) {
-//     localStorage.setItem('balance', 1000);
-// }
-
 function loadInventory() {
     const inventory = JSON.parse(localStorage.getItem('inventory')) || {};
     const inventorySection = document.querySelector('.inventory');
