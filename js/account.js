@@ -5,7 +5,7 @@ if (localStorage.getItem('password') === null) {
     localStorage.setItem('password', '12345');
 }
 if (localStorage.getItem('balance') === null) {
-    localStorage.setItem('balance', '0000');
+    localStorage.setItem('balance', '1000');
 }
 
 function loadAccountData() {
