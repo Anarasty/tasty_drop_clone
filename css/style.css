@@ -461,4 +461,129 @@ footer a {
   font-size: 3rem;
   color: white;
   margin-top: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .roulette {
+    width: 1000px;
+  }
+  .roll__list__item {
+    width: 250px;
+    height: 200px;
+  }
+  .start {
+    font-size: 1.3rem;
+  }
+  .rewards {
+    width: 80%;
+  }
+  .cases__sec,
+  .inventory__sec .inventory {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 992px) {
+  nav .menu_box ul {
+    font-size: 1.6rem;
+  }
+  nav .menu_box ul li {
+    margin: 15px;
+  }
+  .roulette {
+    width: 800px;
+  }
+  .roll__list__item {
+    width: 220px;
+    height: 176px;
+  }
+  .start {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+  .rewards-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cases__sec .cases_box ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .inventory__sec .inventory ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .account__sec .acc__box {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo__box h1 {
+    font-size: 3.5rem;
+  }
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  nav .menu_box ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .menu_box ul li {
+    margin: 10px 0;
+  }
+  .roulette {
+    width: 100%;
+  }
+  .roll__list__item {
+    width: 180px;
+    height: 144px;
+  }
+  .start {
+    font-size: 1.1rem;
+  }
+  .rewards-txt {
+    font-size: 2.2rem;
+  }
+  .cases__sec h1,
+  .inventory__sec h1 {
+    font-size: 2.2rem;
+  }
+  .inventory__sec .inventory ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .logo__box h1 {
+    font-size: 2.5rem;
+  }
+  .app .case__name {
+    font-size: 2rem;
+  }
+  .popup-content {
+    width: 95%;
+    font-size: 1.4rem;
+  }
+  .start {
+    padding: 6px 18px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  .roll__list__item {
+    width: 150px;
+    height: 120px;
+  }
+  .rewards-list {
+    grid-template-columns: 1fr;
+  }
+  .cases__sec .cases_box ul {
+    grid-template-columns: 1fr;
+  }
+  .inventory__sec .inventory ul {
+    grid-template-columns: 1fr;
+  }
+  .account__sec .acc__box {
+    width: 95%;
+  }
+  footer {
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
