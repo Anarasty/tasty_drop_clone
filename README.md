@@ -1,5 +1,8 @@
 # FAQ
 
+## Deployment
+Link - [Anarasty/next-js-portfolio](https://anarasty.github.io/tasty_drop_clone/)
+
 ## Main purpose of this app
 
 Интересная тема проекта (лично для меня). Хотелось попробовать реализовать идею на максимально ванильных технологиях (без доп фреймворков и бекэнда).
